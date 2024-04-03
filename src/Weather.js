@@ -4,7 +4,7 @@ import axios from "axios";
 export default function Weather(props)  {
 
     function handleResponse(response) {
-        alert(`The weather in ${response.data.name} is ${response.data.temperature}ºC`);
+        alert(`The weather in ${response.data.city} is ${response.data.daily[0].temperature.day}ºC`);
     }
         let apiKey = "o84c2a432ct7ef09733306be2507e42f";
         let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${props.city}&key=${apiKey}&units=metric`;
